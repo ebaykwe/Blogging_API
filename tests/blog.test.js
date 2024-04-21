@@ -1,5 +1,5 @@
 import request from 'supertest';
-import { app } from '../app'; // Make sure app is properly exported
+import { app } from '../app'; 
 import { startServer, closeServer } from '../server';
 
 
@@ -17,13 +17,13 @@ afterAll(() => {
 });
 
 describe('Blog Management', () => {
-  // Example user credentials used for testing
+  
   const userCredentials = {
     email: 'john.doe@example.com',
     password: 'password123'
   };
   
-  let token; // To store token for authenticated requests
+  let token; 
 
   // Login before running blog tests
   beforeAll(async () => {
@@ -34,7 +34,7 @@ describe('Blog Management', () => {
     });
 
     const res = await api.post('/api/users/login').send(userCredentials);
-    token = res.body.token; // Save the token for blog operation tests
+    token = res.body.token; 
   });
 
   it('should create a blog', async () => {
