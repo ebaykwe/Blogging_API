@@ -1,4 +1,3 @@
-// server.js
 import express from 'express';
 import mongoose from 'mongoose';
 import dotenv from 'dotenv';
@@ -33,4 +32,4 @@ const closeServer = () => {
     }
 };
 
-export { app, startServer, closeServer };  // Ensure 'app' is also exported if needed by tests
+export { app, startServer, closeServer }; 
